@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalState';
+import Button from 'react-bootstrap/Button'
 import shoes from './../shoes.json';
 import './../App.css'
 
@@ -41,7 +42,8 @@ const Product = () => {
         <div className="product">
             <img src={shoe.img} alt={shoe.name} style={{width:'40vw', height:'30vw'}} />
             <h5 className=" product-name">{shoe.name} </h5>
-            <button onClick={addthisProduct}>Add to cart</button>
+
+            <Button  onClick={addthisProduct} variant="success">Add to cart</Button>{' '}
         </div>
     )
 }
